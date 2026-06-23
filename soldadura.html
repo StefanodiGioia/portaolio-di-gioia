@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Técnico de Soldadura | Laboratorio 2026</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="manual-tecnico">
+            <h1>Manual Técnico de Soldadura y Microsoldadura</h1>
+            <p>Documentación fundamental sobre los procesos de unión y desunión de componentes en placas de circuito impreso (PCB).</p>
+
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <h3>Herramientas de Calor</h3>
+                    <p><strong>Cautín (Soldador tipo lápiz):</strong> Su función es la transferencia térmica por conducción a través de una punta metálica. Se utiliza principalmente para soldadura convencional (*through-hole*) y puntos de conexión que requieren una aplicación de calor puntual y controlada.</p>
+                    <p><strong>Estación de aire caliente:</strong> Emplea un flujo de aire a temperatura regulada por convección. Es indispensable en microsoldadura para componentes de montaje superficial (SMD), permitiendo fundir la aleación de todos los pines de un chip simultáneamente sin contacto físico.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Aleaciones: El Estaño</h3>
+                    <p><strong>Estaño en hilo:</strong> Es el estándar para soldadura manual. En electrónica de PC, se recomienda un diámetro de 0.3 mm a 0.5 mm para garantizar la cantidad exacta de material. Se utiliza exclusivamente con el cautín.</p>
+                    <p><strong>Estaño en pasta:</strong> Mezcla de partículas de soldadura suspendidas en flux. Se aplica mediante esténcil y se activa con calor por aire. Es la técnica definitiva para reballing y soldadura de componentes BGA (chips con esferas en su cara inferior).</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>El Flux (Fundente)</h3>
+                    <p>Químicamente, el flux actúa como un agente reductor que elimina la capa de óxido de los metales antes de la soldadura. Su presencia reduce la tensión superficial, permitiendo que el estaño "moje" correctamente los pads de la placa.</p>
+                    <p><strong>Diferencia:</strong> El flux <strong>líquido</strong> es ideal para una aplicación rápida y limpieza de pistas; el flux en <strong>pasta o gel</strong> ofrece mayor viscosidad, ideal para microsoldadura ya que se mantiene estable sobre componentes minúsculos durante la aplicación del aire caliente.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Técnicas de Extracción</h3>
+                    <p><strong>Malla desoldadora:</strong> Trenza de cobre altamente conductiva que, al calentarse, absorbe el estaño fundido por acción de capilaridad. Es la herramienta de limpieza más precisa para pads de PCB.</p>
+                    <p><strong>Chupestaño (Bomba de succión):</strong> Dispositivo neumático que crea un vacío instantáneo. Es altamente eficiente para remover el exceso de estaño en componentes *through-hole* de mayor tamaño.</p>
+                </div>
+            </div>
+
+            <div class="caja-destacada">
+                <h3>Elementos de Protección Personal (EPP Obligatorios)</h3>
+                <p><strong>Lentes de seguridad transparentes:</strong> Obligatorios para evitar lesiones por proyecciones de estaño fundido o la explosión accidental de capacitores electrolíticos bajo estrés térmico excesivo.</p>
+                <p><strong>Barbijo / Mascarilla:</strong> El humo desprendido por la colofonia (núcleo del estaño) y el flux contiene compuestos orgánicos volátiles e irritantes. Inhalarlos directamente puede causar afecciones respiratorias crónicas, por lo que su filtrado es crítico.</p>
+            </div>
+
+            <div class="caja-destacada">
+                <h3>Reglas de Oro del Laboratorio</h3>
+                <ol>
+                    <li><strong>Orden Radial:</strong> Mantener la mesa libre de objetos innecesarios evita que cables o herramientas calientes causen incendios o daños materiales.</li>
+                    <li><strong>Gestión Térmica:</strong> Nunca dejar cautines o estaciones de aire desatendidas. Siempre deben descansar en su soporte base fuera de la trayectoria de los compañeros.</li>
+                    <li><strong>Integridad del Espacio:</strong> No manipular herramientas o placas ajenas. El espacio de trabajo en microsoldadura es sagrado y cualquier distracción física puede resultar en un daño permanente al hardware.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 - Proyecto de Laboratorio de Hardware | 5to Año</p>
+    </footer>
+
+</body>
+</html>
