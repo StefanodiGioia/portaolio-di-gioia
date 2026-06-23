@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: Procesador | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="titulo-seccion">Análisis del CPU y Gestión Térmica</h2>
+        
+        <div class="contenedor-tarjetas">
+            <article class="tarjeta">
+                <img src="images/nucleos y cache.jpg" alt="Arquitectura CPU">
+                <h3>Arquitectura: Núcleos e IPC</h3>
+                <ul>
+                    <li><strong>Cores vs Threads:</strong>Un núcleo es una unidad física de procesamiento real dentro del silicio. Es como un obrero independiente. Un hilo (Thread) es un camino lógico que le permite al sistema operativo enviarle tareas al núcleo. Un núcleo con Hyper-Threading puede manejar dos hilos, pero no es lo mismo que tener dos núcleos físicos. Es como si el obrero pudiera hacer dos tareas a la vez, pero no es tan eficiente como tener dos obreros.</li>
+                    <li><strong>Hyper-Threading / Multithreading:</strong> Es una tecnología que permite que un solo núcleo físico gestione dos hilos de ejecución. No es que el núcleo se vuelva el doble de rápido, sino que aprovecha los "huecos" de tiempo cuando el procesador está esperando datos para meter otra tarea. Es procesamiento paralelo puro.</li>
+                    <li><strong>Frecuencias Reloj (GHz):</strong>Es la cantidad de ciclos por segundo. La frecuencia Base es la velocidad estable de ahorro de energía; el Turbo/Boost es un empuje extra que hace el procesador cuando detecta una carga pesada y tiene "margen térmico" (está fresco).</li>
+                    <li><strong>IPC:(Instrucciones por Ciclo):</strong> Es la eficiencia. Si un procesador viejo tiene un IPC bajo, aunque vaya a 4.0 GHz, hará menos trabajo que uno nuevo a 3.0 GHz con un IPC alto. Es la diferencia entre caminar rápido dando pasos cortitos o caminar lento dando pasos gigantes.</li>
+                    <li><strong>Caché L1-L3:</strong> Memoria Caché (L1, L2, L3)Es el "estante" de herramientas del procesador. La RAM es como un depósito que queda a dos cuadras; tardás en llegar. La Caché está pegada a los núcleos. Es extremadamente rápida porque usa una tecnología más cara y compleja, pero por eso mismo tiene poca capacidad. El procesador guarda ahí lo que sabe que va a usar en el siguiente milisegundo.</li>
+                    <li><strong>iGPU:</strong> Gráficos Integrados (iGPU / APU). Es un chip de video básico metido dentro del mismo paquete del procesador. Intel: Los modelos terminados en "F" (como el i5-13400F) no tienen video; si no tenés placa dedicada, no da imagen. AMD: Los modelos con "G" (Ryzen 5600G) son APUs con gráficos integrados bastante potentes para su tamaño.</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <img src="images/aire o liquida.jpg" alt="Disipadores y Liquida">
+                <h3>Sistemas de Enfriamiento</h3>
+                <ul>
+                    <li><strong>Refrigeración por Aire (Heat Pipes):</strong> Los disipadores de torre no son solo metal. Los tubos de cobre (Heat Pipes) tienen un líquido especial adentro al vacío. Cuando el CPU calienta el cobre, el líquido se evapora (cambio de fase), sube hasta las aletas de aluminio donde el ventilador lo enfría, se condensa y vuelve a bajar. Mueve el calor muchísimo más rápido que una pieza de metal sólida.</li>
+                    <li><strong>Refrigeración Líquida (AIO):</strong>Usa agua para transportar el calor. El Bloque (sobre el CPU) tiene una Bomba que empuja el líquido por las Mangueras hacia el Radiador. Es ideal para setups donde el procesador genera mucho calor (TDP alto) o donde querés un gabinete estéticamente más limpio.</li>
+                    <li><strong>Pasta Térmica:</strong> A nivel microscópico, el metal del procesador (IHS) y la base del disipador están llenos de pozos y rayones. El aire que queda atrapado ahí es un aislante térmico (no deja pasar el calor). La Pasta Térmica rellena esos huecos asegurando un contacto total. Sin ella, el procesador llegaría al límite térmico casi al instante de prender la PC</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <img src="images/cputrotling.png" alt="Throttling y OC">
+                <h3>Límites y Técnicas de Usuario</h3>
+                <ul>
+                    <li><strong>Thermal Throttling (Estrangulamiento):</strong>Es el "freno de mano" de emergencia. Si el procesador pasa de cierta temperatura (normalmente 95°C-100°C), baja sus GHz drásticamente para consumir menos energía y enfriarse. El usuario lo nota como un "lag" terrible o caídas de FPS de golpe porque el CPU está trabajando a media máquina para no morir.</li>
+                    <li><strong>Overclocking (OC):</strong> Subir la frecuencia y el voltaje por encima de lo que dice la caja. Ganás potencia, pero generás mucho más calor y podés degradar el silicio (acortar la vida útil del chip).</li>
+                    <li><strong>Undervolting:</strong> Es lo contrario. Buscás el voltaje mínimo estable para la frecuencia de fábrica. Es clave en notebooks, porque al consumir menos electricidad, el procesador calienta menos, no hace tanto ruido el ventilador y rinde mejor porque evita el Throttling.</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>Stefano di Gioia - Especialización Informática 2026</p>
+    </footer>
+
+</body>
+</html>

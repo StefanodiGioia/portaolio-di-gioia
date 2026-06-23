@@ -1,0 +1,385 @@
+/* HOJA DE ESTILOS CSS (Cascading Style Sheets) */
+
+body {
+    /* Cambiamos la fuente global a "Inter", la tipografía más usada en apps modernas */
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8fafc;
+    color: #334155; /* Color del texto (un gris muy oscuro para no cansar la vista) */
+    margin: 0; /* Elimina el margen blanco que los navegadores ponen por defecto */
+    transition: background-color 0.3s, color 0.3s; /* Prepara el terreno para un cambio de tema suave */
+}
+
+nav {
+    background-color: #1e293b; /* Color de fondo del menú (azul muy oscuro para contrastar) */
+    padding: 15px; /* Genera espacio interno para que el menú no quede apretado */
+    position: sticky; /* Hace que el menú se quede "pegado" al hacer scroll hacia abajo */
+    top: 0; /* Se fija exactamente en el borde superior de la pantalla */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Flexbox: transforma la lista vertical en una fila horizontal */
+    justify-content: center; /* Centra los elementos en el medio de la pantalla */
+    gap: 30px; /* Separación exacta de 30 píxeles entre cada botón */
+    margin: 0; /* Quitamos los márgenes por defecto */
+    padding: 0; /* Quitamos los rellenos por defecto */
+}
+
+nav a {
+    color: white; /* Color del texto del link a blanco para que resalte */
+    text-decoration: none; /* Quita la línea azul subrayada */
+    font-weight: bold; /* Pone el texto en negrita */
+}
+
+main {
+    max-width: 800px; /* Limita el ancho en monitores grandes a 800 píxeles */
+    margin: 0 auto; /* Centra el bloque: 0 margen arriba/abajo, 'auto' a los costados */
+    padding: 20px; /* Da un espacio interior para que el texto no toque los bordes */
+}
+/* Selecciona cada división temática (Inicio, Componentes, Periféricos, etc.) */
+section {
+    /* ELIMINAMOS el min-height: 80vh; que forzaba el espacio vacío gigante hacia abajo */
+    
+    /* Mantenemos el espacio arriba para que el menú pegajoso no tape los títulos */
+    padding-top: 80px; 
+    
+    /* Agregamos un margen inferior razonable y prolijo para separar cada bloque de contenido */
+    margin-bottom: 60px; 
+    /* Centra el texto y el contenido exclusivamente en la sección de inicio */
+#inicio {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Le da color azul y un pequeño margen al ícono vectorial de la computadora */
+#inicio svg {
+    color: #3b82f6; 
+    margin-top: 15px;
+}
+
+}
+
+.galeria-grid {
+    display: grid; /* Activa CSS Grid, la herramienta más potente para crear cuadrículas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño responsivo: adapta columnas al ancho disponible */
+    gap: 20px; /* Define un espacio exacto de 20 píxeles entre cada tarjeta */
+    margin-top: 30px; /* Separa la galería 30 píxeles del elemento que tenga arriba */
+}
+
+.tarjeta {
+    background-color: white; /* Fondo blanco para que la tarjeta resalte */
+    border: 1px solid #cbd5e1; /* Un borde gris muy sutil para delimitar la caja */
+    border-radius: 8px; /* Redondea las esquinas de la caja */
+    padding: 15px; /* Espacio interno para que el texto y la foto no toquen los bordes */
+    text-align: center; /* Centra el texto y el botón dentro de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Genera una sombra para dar efecto de profundidad */
+}
+
+.tarjeta img {    
+    width: 100%; /* La imagen ocupará siempre el 100% del ancho disponible en su tarjeta */
+    height: 200px; /* Fija una altura exacta para uniformidad */
+    object-fit: cover; /* Evita que la foto se deforme al forzarle la altura */
+    border-radius: 5px; /* Redondea las esquinas de la foto */
+}
+
+.boton-accion {
+    background-color: #3b82f6; /* Color de fondo azul moderno */
+    color: white; /* Texto en blanco para contrastar */
+    border: none; /* Quita el borde estándar de los navegadores */
+    padding: 10px 15px; /* Relleno interno del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Transforma el cursor en una mano indicando interactividad */
+    margin-top: 10px; /* Margen superior para separación */
+}
+dialog {
+    border: none; /* Quita el borde por defecto */
+    border-radius: 10px; /* Redondea la ventana */
+    padding: 25px; /* Espacio interno de la ventana */
+    max-width: 500px; /* Ancho máximo en pantallas grandes */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Sombra pronunciada para destacar */
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo de la página al abrirse */
+    /* --- ETAPA 6: TOQUES FINALES (FOOTER, ANIMACIONES Y RESPONSIVE) --- */
+
+/* 1. DISEÑO DEL FOOTER */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px; /* Lo separa del contenido principal */
+    font-size: 0.9rem;
+}
+
+/* 2. MICRO-ANIMACIONES (EFECTO ANTIGRAVEDAD) */
+/* Seleccionamos las tarjetas e indicamos que cualquier cambio debe ser fluido (0.3 segundos) */
+.tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo-clase ':hover' (detecta cuando el puntero del mouse pasa por encima) */
+.tarjeta:hover {
+    /* translateY(-10px) levanta la tarjeta 10 píxeles hacia arriba simulando flotar */
+    transform: translateY(-10px);
+    
+    /* Aumentamos la sombra debajo para reforzar el efecto 3D de que se separó del fondo */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.boton-accion {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-accion:hover {
+    background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* El botón "late" o crece un 5% */
+}
+
+/* 3. MEDIA QUERIES (PUNTOS DE RUPTURA PARA CELULARES) */
+/* Todo el código dentro de esta regla SOLO se ejecutará si la pantalla mide 600px de ancho o menos */
+@media screen and (max-width: 600px) {
+    
+    /* Modificamos el menú para que los botones se apilen en vertical en vez de estar en fila */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Reducimos el espacio entre botones */
+    }
+
+    /* Achicamos los títulos principales para que no se desborden de la pantalla del celular */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Reducimos el relleno interno de la ventana modal para ganar espacio */
+    dialog {
+        padding: 15px;
+        width: 95%; /* Aprovechamos casi todo el ancho de la pantallita */
+    }
+}
+
+}
+/* Centra el texto y el ícono solo en la sección de presentación */
+#inicio {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Le da un poco de color al ícono para que no quede negro básico */
+#inicio svg {
+    color: #3b82f6; /* Azul moderno */
+    margin-top: 15px;
+}
+/* --- ETAPA 7: MODO OSCURO Y BOTÓN FLOTANTE --- */
+
+/* 1. Diseño del botón sutil */
+.interruptor-tema {
+    position: fixed; /* Lo saca del flujo normal y lo ancla a la pantalla */
+    top: 50px; /* Separación desde el techo */
+    right: 50px; /* Separación desde el borde derecho */
+    z-index: 1000; /* Se asegura de que siempre flote por encima de las fotos o textos */
+    
+    background: transparent; /* Fondo invisible */
+    border: none; /* Sin borde */
+    font-size: 2rem; /* Tamaño grande para la silueta */
+    color: #334155; /* Color gris oscuro inicial */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Pequeña animación al pasar el mouse por encima de la luna/sol */
+.interruptor-tema:hover {
+    transform: scale(1.1) rotate(10deg); 
+}
+
+/* 2. Reglas del Modo Oscuro */
+/* Cuando JS le agregue la clase 'modo-oscuro' al body, estos colores mandan */
+body.modo-oscuro {
+    background-color: #0f172a; /* Fondo azul noche profundo */
+    color: #e2e8f0; /* Texto gris claro */
+}
+
+/* Invertimos el color del botón flotante para que se vea en la oscuridad */
+body.modo-oscuro .interruptor-tema {
+    color: #eab308; /* Lo pintamos de amarillo */
+}
+
+/* Oscurecemos el fondo de las tarjetas de hardware */
+body.modo-oscuro .tarjeta {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+}
+
+/* Oscurecemos la ventana modal (dialog) */
+body.modo-oscuro dialog {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* Ajustamos el color de los enlaces generales en modo oscuro */
+body.modo-oscuro a {
+    color: #60a5fa;
+}
+/* --- ETAPA 9: ESTILOS DE LA CAJA DESTACADA (MANTENIMIENTO) --- */
+
+.caja-destacada {
+    text-align: center; 
+    margin-top: 40px; 
+    padding: 25px; 
+    background-color: #e2e8f0; /* Color gris clarito elegante para el modo día */
+    border-radius: 8px; /* Bordes redondeados acordes al resto del sitio */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de tema */
+}
+
+/* Regla para que la caja se oscurezca cuando activamos el Modo Oscuro */
+body.modo-oscuro .caja-destacada {
+    background-color: #1e293b; /* Fondo azul noche profundo */
+    border: 1px solid #334155; /* Borde sutil para que no se pierda en el fondo oscuro */
+}
+/* --- ETAPA 10: ESTÉTICA DEL SEGUIDOR DE CURSOR --- */
+#cursor-follower {
+    position: fixed; /* Lo saca del flujo normal para moverse libremente */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(59, 130, 246, 0.4); /* Azul traslúcido */
+    border-radius: 50%; /* Lo convierte en un círculo perfecto */
+    
+    pointer-events: none; /* INVISIBLE PARA CLICS: Permite cliquear lo que hay debajo */
+    z-index: 9999; /* Lo coloca en la capa más alta (por encima de todo) */
+    
+    transition: transform 0.1s ease-out; /* Suaviza el movimiento */
+    transform: translate(-50%, -50%); /* Centra el círculo exactamente en la punta del cursor */
+}
+/* --- ETAPA 11: GLASSMORPHISM Y SCROLLBAR --- */
+
+/* Modificamos el menú para que parezca de cristal (tipo Windows 11 o macOS) */
+nav {
+    background-color: rgba(30, 41, 59, 0.8) !important; /* Azul oscuro con 80% de opacidad */
+    backdrop-filter: blur(10px); /* Pide a la tarjeta gráfica que desenfoque lo que pasa por detrás */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores basados en Safari */
+}
+
+/* Personalización del Scrollbar (Barra de desplazamiento) */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* Color de la pista o "carril" */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Color azul moderno para la barrita móvil */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Azul más oscuro al pasar el mouse */
+}
+/* Ajuste para que las imágenes técnicas no se estiren */
+.caja-destacada img, .tarjeta-investigacion img {
+    width: auto;           /* Que use su ancho real */
+    max-width: 100%;       /* Pero que no se salga de la pantalla en celulares */
+    height: auto;          /* Que mantenga la proporción original (sin aplastar) */
+    max-height: 450px;     /* Que no sea un "choclo" gigante hacia abajo */
+    display: block;
+    margin: 20px auto;     /* Centrada con espacio arriba y abajo */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* Estilo específico para las imágenes dentro del informe técnico */
+.contenedor-img-informe {
+    text-align: center; /* Centra la imagen */
+    margin: 20px 0;    /* Le da espacio arriba y abajo */
+}
+
+.contenedor-img-informe img {
+    width: 100%;           /* Que ocupe el ancho en celulares */
+    max-width: 600px;      /* Que no se haga gigante en PC (esto arregla tu problema) */
+    height: auto;          /* Mantiene la proporción */
+    border-radius: 8px;    /* Bordes redondeados para que pegue con tus tarjetas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Una sombra suave para que no parezca "pegada" */
+}
+
+/* Ajuste para que las tarjetas de la galería se vean bien debajo */
+.galeria-grid {
+    margin-top: 20px;
+}
+/* Corrección para tarjetas con listas de texto largo */
+.tarjeta {
+    height: auto; /* Permite que la tarjeta crezca según el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajuste para las imágenes dentro de la investigación */
+.tarjeta img {
+    width: 100%;
+    max-height: 180px; /* Reducimos un poco la altura máxima */
+    object-fit: contain; /* CAMBIO CLAVE: Evita que la imagen se estire o se corte */
+    background-color: #f1f5f9; /* Agrega un fondo sutil si la imagen es pequeña */
+    margin-bottom: 15px;
+}
+
+/* Alineación del texto de las listas */
+.tarjeta ul {
+    text-align: left; /* Las listas se leen mejor alineadas a la izquierda */
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+    min-height: 3em; /* Asegura que los títulos ocupen el mismo espacio */
+    display: flex;
+    align-items: center;
+}
+/* Ajustes para que no se vea cargado */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-left: 5px solid #3498db; /* Un detalle de color lateral */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.card ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+.card li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.hero-short {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ecf0f1;
+}

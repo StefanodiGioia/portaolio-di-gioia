@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: PSU y Gabinete | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor">
+        <section id="informe-tecnico">
+            <h2>Investigación: Energía y Flujo de Aire</h2>
+    
+            <div class="galeria-grid">
+                <div class="tarjeta" id="psu-tecnico">
+                    <h3>1. Fuente de Alimentación (PSU)</h3>
+                    <img src="images/fuente.jpg" alt="PSU">
+                    <strong>Conversión de Energía:</strong> La fuente cumple la función crítica de transformar la Corriente Alterna (AC) de la red eléctrica (que oscila en ciclos) a Corriente Continua (DC) de bajo voltaje (12V, 5V, 3.3V), que es la única que los transistores de la PC pueden utilizar sin dañarse.
+
+                    <strong>Certificación 80 Plus:</strong> Este es un mito común: <strong>80 Plus NO mide la calidad de los componentes</strong>. Solo certifica la eficiencia energética, es decir, qué porcentaje de energía de la pared se convierte efectivamente en energía para la PC vs. cuánta se desperdicia en forma de calor. Una fuente con 80 Plus Gold puede tener componentes baratos y fallar, mientras que una sin certificación podría tener componentes premium (aunque es raro).
+
+                    <strong>Protecciones Eléctricas:</strong> Son el "seguro de vida" de tu PC.
+                    <ul>
+                        <li><strong>OVP (Over Voltage Protection):</strong> Corta la energía si el voltaje sube por encima de un límite seguro.</li>
+                        <li><strong>SCP (Short Circuit Protection):</strong> Apaga la fuente instantáneamente si detecta un cortocircuito.</li>
+                    </ul>
+                    Si una fuente genérica no tiene esto, ante un pico de tensión, el componente sufrirá daños permanentes, probablemente quemando tu placa base o GPU.
+                </div>
+            </div>
+
+            <div class="galeria-grid">
+                <div class="tarjeta" id="gabinete-airflow">
+                    <h3>2. Gabinete y Flujo de Aire</h3>
+                    <img src="images/flujo.jpg" alt="flujo de aire">
+                    <strong>Funcionalidad vs. Estética:</strong> El gabinete no es solo una caja; es un chasis de ingeniería que protege los componentes contra daños físicos, reduce el ruido electromagnético, organiza el cableado para no obstruir el paso del aire y proporciona el soporte estructural para los componentes pesados (como la GPU).
+                    
+                    <strong>Dinámica de Fluidos (Airflow):</strong> 
+                    
+                    El aire debe fluir como un río: <strong>fresco desde el frente y abajo, caliente hacia atrás y arriba</strong>. 
+                    
+                    <strong>Presión Positiva:</strong> Se logra cuando metes más aire del que sacas (ej: 3 ventiladores entrando, 1 saliendo). Al haber más presión dentro, el aire intenta escapar por todas las ranuras, evitando que el polvo entre por orificios sin filtro. Es la mejor forma de mantener el equipo limpio.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

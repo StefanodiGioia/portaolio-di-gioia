@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: Tarjetas Gráficas | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor">
+        <section id="informe-tecnico">
+            <h2>Investigación: Tarjetas Gráficas (GPU)</h2>
+    
+            <div class="galeria-grid">
+                <div class="tarjeta" id="gpu-arquitectura">
+                    <h3>1. Arquitectura: CPU vs. GPU</h3>
+                    <img src="images/gpu.png" alt="Tarjeta Gráfica">
+                    <strong>Arquitectura:</strong> Mientras que el CPU es un procesador de propósito general con pocos núcleos muy rápidos diseñados para tareas secuenciales, la GPU es un "especialista" en procesamiento paralelo masivo. Está equipada con miles de núcleos pequeños (<strong>CUDA Cores</strong> en NVIDIA o <strong>Stream Processors</strong> en AMD), lo que le permite realizar miles de cálculos matemáticos simultáneos, ideal para renderizar gráficos complejos o ejecutar modelos de Inteligencia Artificial.
+                    
+                    <h3>2. Memoria VRAM</h3>
+                    <strong>VRAM (Video RAM):</strong> Es la memoria exclusiva de la tarjeta gráfica (como la GDDR6). La GPU necesita su propia memoria soldada en su placa porque requiere un ancho de banda altísimo para acceder instantáneamente a texturas, buffers de imagen y modelos 3D. Usar la memoria RAM general de la computadora sería insuficiente debido a la latencia y la distancia física en la placa base, lo que causaría graves caídas de rendimiento (tirones).
+                </div>
+            </div>
+
+            <div class="galeria-grid">
+                <div class="tarjeta" id="consumo-refrigeracion">
+                    <h3>3. Consumo y Refrigeración</h3>
+                    <strong>Energía:</strong> Las tarjetas de gama media/alta demandan mucha energía, superando ampliamente los 75W que puede suministrar el puerto PCIe de la placa base. Por eso, incluyen conectores PCIe adicionales (de 8 pines) que traen la energía directamente desde la fuente de poder.
+                    
+                    <strong>Refrigeración:</strong> Al realizar tantos cálculos, generan una gran cantidad de calor. Sus disipadores gigantes con 2 o 3 ventiladores son fundamentales para evitar el <em>Thermal Throttling</em>, un mecanismo de seguridad donde la GPU baja su velocidad para no quemarse al llegar a temperaturas críticas.
+                    
+                    <h3>4. Tecnologías Modernas</h3>
+                    <strong>Ray Tracing:</strong> Técnica que simula el comportamiento físico de la luz (reflejos, sombras y refracciones reales) calculando el rebote de millones de rayos. Esto se logra mediante núcleos dedicados llamados <em>RT Cores</em>.
+
+                    <strong>Upscaling (DLSS / FSR):</strong> Es una solución inteligente de renderizado. La GPU dibuja el juego a una resolución menor (para ganar fluidez) y utiliza Inteligencia Artificial para escalar esa imagen a una resolución superior (ej. 4K), logrando alta calidad visual sin sacrificar la tasa de cuadros por segundo (FPS).
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: La Placa Base | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h1>Investigación de la Placa Base</h1>
+            <p>Arquitectura interna y rendimiento del sistema</p>
+        </section>
+
+        <section>
+            <h2>1. Factores de Forma (Form Factors)</h2>
+            <p>Dimensiones y estándares de montaje.</p>
+            <div class="contenedor-img-informe">
+            <img src="images/tamaños.jpg">
+            </div>
+            <div class="galeria-grid">       
+                <div class="tarjeta">
+                    <h3>ATX</h3>
+                    <p><strong>305 x 244 mm:</strong> El estándar completo. Permite mayor expansión (7 slots PCIe) y mejor flujo de aire.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Micro-ATX</h3>
+                    <p><strong>244 x 244 mm:</strong> Más compacto pero compatible con ATX. Ideal para setups de gama media.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Mini-ITX</h3>
+                    <p><strong>170 x 170 mm:</strong> Extremo compacto. Limitado a un solo slot PCIe y 2 slots de RAM.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. El Zócalo del Procesador (Socket)</h2>
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <img src="images/lga.jpg">
+                    <h3>LGA (Land Grid Array)</h3>
+                    <p>Los pines están en la placa base. Usado por Intel (LGA 1700) y AMD (AM5).</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="images/pga.jpg">
+                    <h3>PGA (Pin Grid Array)</h3>
+                    <p>Los pines están en el procesador. Estándar clásico de AMD hasta AM4.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="caja-destacada">
+                <img src="images/vrm.jpg">
+                <h2>3. El VRM y Fases de Alimentación</h2>
+                <p>El VRM regula el voltaje de la fuente (12V) al nivel del CPU (aprox. 1.2V).</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li><strong>MOSFETs:</strong> Conmutan la energía (generan calor).</li>
+                    <li><strong>Chokes:</strong> Estabilizan y filtran la corriente.</li>
+                    <li><strong>Capacitores:</strong> Almacenan carga para un flujo limpio.</li>
+                </ul>
+                <p><em>Importancia:</em> Sin una buena disipación en los VRM, el CPU sufre "Thermal Throttling".</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Chipset y Buses de Datos</h2>
+            <div class="galeria-grid">
+                <div class="tarjeta">
+                    <img src="images/chipset.jpg">
+                    <h3>El Chipset</h3>
+                    <p>Es el centro de comunicaciones. Las gamas altas (Z790/X670) permiten overclocking y más puertos que las de entrada (H610/A620).</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="images/nvme.png">
+                    <h3>Líneas PCIe y M.2</h3>
+                    <p>Carriles x16 (GPUs) vs x4 (SSD NVMe). La evolución a M.2 NVMe eliminó el cuello de botella de los 600MB/s del puerto SATA.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Conexiones Internas y Cabezales (Headers)</h2>
+            <div class="galeria-grid">
+                <div class="tarjeta" style="text-align: left;">
+                    <img src="images/atxconector.jpg">
+                    <h3>Alimentación (Energía)</h3>
+                    <ul>
+                        <li><strong>ATX 24-pines:</strong> El conector más grande; suministra energía general a toda la placa base.</li>
+                        <li><strong>EPS 8-pines (12V):</strong> Ubicado cerca del socket, alimenta exclusivamente al procesador.</li>
+                    </ul>
+                </div>
+                
+                <div class="tarjeta" style="text-align: left;">
+                    <img src="images/congabinete.jpg">
+                    <h3>Conectores de Gabinete</h3>
+                    <ul>
+                        <li><strong>F_PANEL:</strong> Controla el botón de encendido, reset y los LEDs frontales.</li>
+                        <li><strong>F_AUDIO:</strong> Envía la señal de sonido a los Jacks de auriculares/micrófono frontales.</li>
+                        <li><strong>USB Headers:</strong> Conexiones internas para los puertos USB 2.0 o 3.0 del chasis.</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta" style="text-align: left;">
+                    <img src="images/SYSFAN.jpg">
+                    <h3>Almacenamiento y Ventilación</h3>
+                    <ul>
+                        <li><strong>Puertos SATA:</strong> Interfaz de datos para discos duros (HDD) o SSDs de 2.5".</li>
+                        <li><strong>CPU_FAN / SYS_FAN:</strong> Cabezales de 4 pines para controlar la velocidad de los ventiladores.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 - Stefano di Gioia | Laboratorio de Hardware</p>
+    </footer>
+
+    <script>
+        if (document.body.classList.contains('modo-oscuro') || localStorage.getItem('tema') === 'oscuro') {
+            document.body.classList.add('modo-oscuro');
+        }
+    </script>
+</body>
+</html>
