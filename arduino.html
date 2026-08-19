@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: Proyectos de Arduino e IoT | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <main class="contenedor">
+        <section id="informe-tecnico">
+            <h2>Investigación: Proyectos de Arduino e IoT (Wokwi)</h2>
+            <p>Documentación técnica de las simulaciones y prácticas de programación en C++ con microcontrolador ESP32.</p>
+    
+            <div class="galeria-grid">
+                <!-- 1. Servidor Web -->
+                <div class="tarjeta" id="servidor">
+                    <h3>1. Servidor Web ESP32</h3>
+                    <img src="images/servidor.jpeg" alt="Servidor Web con ESP32">
+                    <p><strong>Hardware:</strong> ESP32, Protoboard, Sensor DHT.</p>
+                    <p><strong>Lógica de Red:</strong> Utiliza las librerías de red del ESP32 para conectarse a una red Wi-Fi y levantar un servidor HTTP local.</p>
+                    <p><strong>Funcionamiento:</strong> Permite procesar peticiones web de clientes para visualizar los datos capturados por el sensor en tiempo real desde el navegador.</p>
+                    <a href="https://wokwi.com/projects/472171925212863489" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 2. Teclado 4x4 -->
+                <div class="tarjeta" id="teclado">
+                    <h3>2. Teclado Matricial 4x4</h3>
+                    <img src="images/teclado4x4.jpeg" alt="Teclado Matricial 4x4">
+                    <p><strong>Hardware:</strong> ESP32, Keypad 4x4 (Matriz de botones).</p>
+                    <p><strong>Lógica de Escaneo:</strong> Configuración de pines de filas como salidas y columnas como entradas con pull-up interno.</p>
+                    <p><strong>Funcionamiento:</strong> El microcontrolador barre secuencialmente las filas enviando niveles bajos para detectar qué botón fue presionado.</p>
+                    <a href="https://wokwi.com/projects/472169413549973505" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 3. Módulo Relé -->
+                <div class="tarjeta" id="relay">
+                    <h3>3. Módulo Relé y LED</h3>
+                    <p><strong>Hardware:</strong> ESP32, Módulo Relé, LED, Resistencias.</p>
+                    <p><strong>Lógica de Conmutación:</strong> Envío de señales digitales de control (HIGH/LOW) desde un pin GPIO hacia la entrada del relé.</p>
+                    <p><strong>Funcionamiento:</strong> Actúa como interruptor controlado electrónicamente para aislar y manejar cargas de potencia o simular dispositivos.</p>
+                    <a href="https://wokwi.com/projects/471911615372721153" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 4. Pantalla LCD I2C -->
+                <div class="tarjeta" id="lcd">
+                    <h3>4. Pantalla LCD I2C</h3>
+                    <img src="images/lcd.jpg" alt="Pantalla LCD I2C">
+                    <p><strong>Hardware:</strong> ESP32, Display LCD 1602 con adaptador I2C (Dirección 0x27).</p>
+                    <p><strong>Lógica de Comunicación:</strong> Utiliza el protocolo bidireccional de dos hilos (SDA y SCL) para reducir el cableado tradicional.</p>
+                    <p><strong>Funcionamiento:</strong> Inicialización de la librería LiquidCrystal_I2C, encendido de retroiluminación y despliegue de texto por filas.</p>
+                    <a href="https://wokwi.com/projects/471909258775589889" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 5. Ventana Automatizada -->
+                <div class="tarjeta" id="ventana">
+                    <h3>5. Sistema de Ventana IoT</h3>
+                    <img src="images/ventana.jpeg" alt="Ventana automatizada con servo">
+                    <p><strong>Hardware:</strong> ESP32, Servomotor, Sensores de control.</p>
+                    <p><strong>Lógica de Automatización:</strong> Lectura de variables del entorno y procesamiento condicional de estados.</p>
+                    <p><strong>Funcionamiento:</strong> Accionamiento mecánico automatizado para simular la apertura y cierre de una ventana de forma remota.</p>
+                    <a href="https://wokwi.com/projects/470907089916106753" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 6. Servomotor -->
+                <div class="tarjeta" id="servo">
+                    <h3>6. Control de Servomotor</h3>
+                    <img src="images/servo.jpeg" alt="Control de Servomotor">
+                    <p><strong>Hardware:</strong> ESP32, Servomotor.</p>
+                    <p><strong>Lógica PWM:</strong> Generación de modulación por ancho de pulsos para definir el ciclo de trabajo.</p>
+                    <p><strong>Funcionamiento:</strong> Envío de pulsos de control específicos para posicionar el eje del servomotor en un ángulo exacto.</p>
+                    <a href="https://wokwi.com/projects/470455469509690369" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 7. Potenciómetro -->
+                <div class="tarjeta" id="potenciometro">
+                    <h3>7. Lectura de Potenciómetro</h3>
+                    <img src="images/potenciometro.jpeg" alt="Lectura de potenciómetro">
+                    <p><strong>Hardware:</strong> ESP32, Potenciómetro, LED, Resistencias.</p>
+                    <p><strong>Lógica Analógica:</strong> Uso del conversor Analógico-Digital (ADC) del ESP32 para leer la variación de voltaje.</p>
+                    <p><strong>Funcionamiento:</strong> Mapeo de los valores leídos para controlar parámetros como la intensidad lumínica de un LED.</p>
+                    <a href="https://wokwi.com/projects/470454039203677185" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+
+                <!-- 8. Botón -->
+                <div class="tarjeta" id="boton">
+                    <h3>8. Entrada Digital (Botón)</h3>
+                    <img src="images/boton.jpeg" alt="Botón y LED digital">
+                    <p><strong>Hardware:</strong> ESP32, Pulsador, LED, Resistencia.</p>
+                    <p><strong>Lógica de Entradas:</strong> Lectura digital de estados lógicos discretos (HIGH o LOW).</p>
+                    <p><strong>Funcionamiento:</strong> Detecta el flanco de presión del botón para alternar el estado del LED o ejecutar una subrutina.</p>
+                    <a href="https://wokwi.com/projects/470452541375682561" target="_blank" class="boton-accion">Ver Circuito en Wokwi</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

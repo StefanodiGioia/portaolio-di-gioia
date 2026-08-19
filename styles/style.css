@@ -383,3 +383,83 @@ nav {
     padding: 40px 20px;
     background: #ecf0f1;
 }
+/* Estilo para las tarjetas de Arduino */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.tarjeta {
+    background: var(--color-fondo-tarjeta); /* Asegúrate de tener esta variable o pon un color fijo ej: #f4f4f4 */
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Control estricto de las imágenes */
+.tarjeta img {
+    width: 100%;
+    height: 180px; /* Altura fija para que todas sean iguales */
+    object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+/* Esto controla que se pongan en columnas de tarjetas (rejilla) */
+#arduino .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Esto le da forma de tarjeta con borde, fondo y diseño limpio */
+#arduino .tarjeta {
+    background: var(--color-fondo-tarjeta, #ffffff);
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ESTO ES LO CLAVE: Achica y ajusta tus fotos verticales para que entren perfectas */
+#arduino .tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recorta la foto para que llene el espacio sin deformarse ni gigante */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#arduino .tarjeta h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.1rem;
+}
+
+#arduino .tarjeta p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
